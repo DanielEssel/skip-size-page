@@ -80,13 +80,13 @@ const SkipSelectionPage: React.FC = () => {
     setSelectedSkipId(null);
   }
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
+    <div className="min-h-screen bg-slate-900">
+      <header className="bg-slate-700 shadow-sm">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-green-700">
+          <h1 className="text-3xl font-bold text-amber-500">
             Choose Your Skip Size
           </h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-slate-200 mt-1">
             Select the skip size that best suits your needs
           </p>
         </div>
@@ -95,13 +95,13 @@ const SkipSelectionPage: React.FC = () => {
         <ProgressStepper />
         {loading ? (
           <div className="flex justify-center items-center h-64">
-            <Loader2 className="w-10 h-10 text-green-600 animate-spin" />
-            <span className="ml-3 text-lg text-gray-700">
+            <Loader2 className="w-10 h-10 text-amber-500 animate-spin" />
+            <span className="ml-3 text-lg text-slate-200">
               Loading skip options...
             </span>
           </div>
         ) : error ? (
-          <div className="bg-red-50 text-red-800 p-4 rounded-lg">
+          <div className="bg-rose-100 text-rose-700 p-4 rounded-lg">
             <p>{error}</p>
           </div>
         ) : (
@@ -112,8 +112,8 @@ const SkipSelectionPage: React.FC = () => {
               filters={filters}
             />
             {filteredSkips.length === 0 ? (
-              <div className="bg-amber-50 p-6 rounded-lg text-center">
-                <p className="text-amber-800">
+              <div className="bg-amber-100 p-6 rounded-lg text-center">
+                <p className="text-amber-700">
                   No skips match your current filters. Please adjust your
                   criteria.
                 </p>
@@ -136,21 +136,21 @@ const SkipSelectionPage: React.FC = () => {
 
       {/* Centered Popup Card for Continue */}
       {selectedSkip && (
-        <div className="fixed inset-x-0 bottom-4 flex justify-center z-10 pointer-events-none">
+        <div className="fixed inset-x-0 bottom-20 flex justify-center z-10 pointer-events-none">
           <div
             className="
       w-full max-w-xs sm:max-w-md md:max-w-lg 
-      mx-2 bg-white/70 backdrop-blur-sm border border-green-200 
+      mx-2 bg-white/95 backdrop-blur-sm border border-amber-500 
       rounded-xl shadow-lg p-3 flex flex-col items-center pointer-events-auto 
       transition-all duration-200
     "
           >
             {/* Skip Details */}
             <div className="w-full text-center mb-2">
-              <div className="font-bold text-base text-green-800">
+              <div className="font-bold text-base text-amber-600">
                 {selectedSkip.type}
               </div>
-              <div className="text-green-900 flex flex-wrap justify-center gap-2 mt-0.5 text-sm font-normal">
+              <div className="text-slate-800 flex flex-wrap justify-center gap-2 mt-0.5 text-sm font-normal">
                 <span>{selectedSkip.size} Yards</span>
                 <span>· £{selectedSkip.price}</span>
                 <span>· {selectedSkip.hirePeriod} Hire</span>
@@ -160,7 +160,7 @@ const SkipSelectionPage: React.FC = () => {
             <div className="flex w-full gap-2 mt-1">
               <button
                 onClick={handleBack}
-                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-50 hover:bg-green-100 text-green-800 border border-green-200 shadow-sm transition"
+                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-slate-200 hover:bg-slate-300 text-slate-800 border border-slate-300 shadow-sm transition"
               >
                 <span className="flex items-center justify-center gap-1">
                   <svg
@@ -182,7 +182,7 @@ const SkipSelectionPage: React.FC = () => {
               </button>
               <button
                 onClick={handleContinue}
-                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-600 hover:bg-green-700 text-white shadow-sm transition"
+                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm transition"
               >
                 <span className="flex items-center justify-center gap-1">
                   Continue
