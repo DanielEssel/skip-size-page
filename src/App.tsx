@@ -1,4 +1,4 @@
-import React from 'react';
+
 import SkipSelectionPage from './components/SkipSelectionPage';
 
 function App() {
