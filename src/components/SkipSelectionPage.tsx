@@ -137,46 +137,61 @@ const SkipSelectionPage: React.FC = () => {
       {/* Centered Popup Card for Continue */}
       {selectedSkip && (
         <div className="fixed inset-x-0 bottom-4 flex justify-center z-10 pointer-events-none">
-  <div className="
+          <div
+            className="
       w-full max-w-xs sm:max-w-md md:max-w-lg 
       mx-2 bg-white/70 backdrop-blur-sm border border-green-200 
       rounded-xl shadow-lg p-3 flex flex-col items-center pointer-events-auto 
       transition-all duration-200
-    ">
-    {/* Skip Details */}
-    <div className="w-full text-center mb-2">
-      <div className="font-bold text-base text-green-800">{selectedSkip.type}</div>
-      <div className="text-green-900 flex flex-wrap justify-center gap-2 mt-0.5 text-sm font-normal">
-        <span>{selectedSkip.size} Yards</span>
-        <span>· £{selectedSkip.price}</span>
-        <span>· {selectedSkip.hirePeriod} Hire</span>
-      </div>
-    </div>
-    {/* Buttons */}
-    <div className="flex w-full gap-2 mt-1">
-      <button
-        onClick={handleBack}
-        className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-50 hover:bg-green-100 text-green-800 border border-green-200 shadow-sm transition"
-      >
-        <span className="flex items-center justify-center gap-1">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back
-        </span>
-      </button>
-      <button
-        onClick={handleContinue}
-        className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-600 hover:bg-green-700 text-white shadow-sm transition"
-      >
-        <span className="flex items-center justify-center gap-1">
-          Continue
-          <ArrowRight className="w-4 h-4" />
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
+    "
+          >
+            {/* Skip Details */}
+            <div className="w-full text-center mb-2">
+              <div className="font-bold text-base text-green-800">
+                {selectedSkip.type}
+              </div>
+              <div className="text-green-900 flex flex-wrap justify-center gap-2 mt-0.5 text-sm font-normal">
+                <span>{selectedSkip.size} Yards</span>
+                <span>· £{selectedSkip.price}</span>
+                <span>· {selectedSkip.hirePeriod} Hire</span>
+              </div>
+            </div>
+            {/* Buttons */}
+            <div className="flex w-full gap-2 mt-1">
+              <button
+                onClick={handleBack}
+                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-50 hover:bg-green-100 text-green-800 border border-green-200 shadow-sm transition"
+              >
+                <span className="flex items-center justify-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                  Back
+                </span>
+              </button>
+              <button
+                onClick={handleContinue}
+                className="flex-1 px-0 py-2 rounded-lg font-medium text-base bg-green-600 hover:bg-green-700 text-white shadow-sm transition"
+              >
+                <span className="flex items-center justify-center gap-1">
+                  Continue
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
